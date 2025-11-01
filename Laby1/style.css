@@ -1,16 +1,73 @@
-html {
-      background-color: #DDBEAA;
-      height: 100vh;
-}
-
 body {
-      height: 100vh;
-      margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  margin: 20px;
 }
 
-.main-container {
-      height: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+/* --- index.html --- */
+h1 {
+  color: #333;
+}
+
+ol li {
+  margin-bottom: 10px;
+}
+
+.link1 {
+  color: palevioletred;
+}
+.link2 {
+  color: purple;
+}
+.link3 {
+  color: blueviolet;
+}
+
+/* --- cwiczenie1.html --- */
+.autor span {
+  color: violet;
+  font-weight: bold;
+}
+
+/* --- cwiczenie2.html --- */
+table {
+  border-collapse: collapse;
+  width: 70%;
+}
+
+th,
+td {
+  border: 1px solid #333;
+  padding: 8px;
+  text-align: center;
+}
+
+th {
+  background-color: peachpuff;
+}
+
+/* --- cwiczenie3.html --- */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  width: 400px;
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+}
+
+.red {
+  background-color: red;
+}
+.blue {
+  background-color: blue;
+}
+.green {
+  background-color: green;
+}
+.yellow {
+  background-color: yellow;
 }
