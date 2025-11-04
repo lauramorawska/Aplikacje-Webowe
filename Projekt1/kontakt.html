@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kontakt — Lawendowy Zakątek</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <h1 class="logo">🌸 Lawendowy Zakątek</h1>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="galeria.html">Galeria</a></li>
+          <li><a href="kontakt.html" class="active">Kontakt</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="contact-section">
+      <h2>Skontaktuj się z nami</h2>
+      <p>Masz pytania lub chcesz zamówić bukiet? Napisz do nas poniżej 🌷</p>
+
+      <form class="contact-form">
+        <label for="email">E-mail:</label>
+        <input
+          type="text"
+          id="email"
+          name="email"
+          placeholder="Wpisz swój e-mail"
+          required
+        />
+
+        <label for="subject">Temat wiadomości:</label>
+        <select id="subject" name="subject" required>
+          <option value="">-- Wybierz temat --</option>
+          <option value="zamowienie">Zamówienie bukietu</option>
+          <option value="wspolpraca">Współpraca</option>
+          <option value="inne">Inne pytanie</option>
+        </select>
+
+        <label for="message">Wiadomość:</label>
+        <textarea
+          id="message"
+          name="message"
+          rows="5"
+          placeholder="Napisz swoją wiadomość..."
+          required
+        ></textarea>
+
+        <input type="submit" value="Wyślij" class="btn" />
+      </form>
+    </main>
+
+    <footer>
+      <p>
+        © 2025 Lawendowy Zakątek — Projekt: Laura Morawska
+        <span id="clock"></span>
+      </p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
