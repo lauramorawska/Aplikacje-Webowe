@@ -1,0 +1,121 @@
+/* Basic page layout and canvas sizing to avoid unexpected scaling */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  background: #70c5ce; /* light sky color to match game */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+canvas#gameCanvas {
+  /* Force the canvas to render at the intended logical size
+		 and avoid CSS scaling which causes coordinate mismatch. */
+  width: 400px;
+  height: 600px;
+  display: block;
+  image-rendering: pixelated; /* keep pixel-art sharp */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Small responsive tweak: when screen is narrower than canvas, scale down */
+@media (max-width: 420px) {
+  canvas#gameCanvas {
+    width: calc(100vw - 20px);
+    height: calc((100vw - 20px) * 1.5); /* keep 2:3 ratio */
+  }
+}
+
+/* container to position overlays relative to canvas */
+.gameContainer {
+  position: relative;
+  width: 400px;
+  height: 600px;
+}
+
+.scoreHUD {
+  position: absolute;
+  right: 12px;
+  top: 10px;
+  z-index: 20;
+  background: rgba(0, 0, 0, 0.45);
+  color: #fff;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 18px;
+  pointer-events: none;
+}
+
+.overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none; /* allow canvas clicks unless overlay explicitly enables */
+  color: #fff;
+  text-shadow: 0 2px 2px rgba(0, 0, 0, 0.6);
+}
+
+.overlay img {
+  max-width: 80%;
+  height: auto;
+  pointer-events: none;
+}
+
+.overlay .startText {
+  color: #fff;
+  font-size: 20px;
+  margin-top: 8px;
+  pointer-events: none;
+  text-align: center;
+}
+
+.hidden {
+  display: none;
+}
+
+#gameOverScreen {
+  pointer-events: auto;
+}
+#gameOverStats {
+  color: #fff;
+  text-align: center;
+  margin-top: 8px;
+}
+#gameOverStats #goScore {
+  font-size: 22px;
+  margin: 6px 0;
+}
+#topList {
+  color: #fff;
+  margin: 6px 0;
+  padding-left: 0;
+  list-style-position: inside;
+  list-style-type: none;
+}
+#topList li {
+  margin: 4px 0;
+}
+
+.btn {
+  margin-top: 18px;
+  padding: 12px 26px;
+  background: #222;
+  color: #fff;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+@media (max-width: 420px) {
+  .gameContainer {
+    width: calc(100vw - 20px);
+    height: calc((100vw - 20px) * 1.5);
+  }
+}
