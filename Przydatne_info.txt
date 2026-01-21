@@ -1,0 +1,5 @@
+Do instalowania bootstrapu
+npm i bootstrap@latest
+https://getbootstrap.com/docs/5.3/components/list-group/
+
+rafce - do szybkiego tworzenia komponentu

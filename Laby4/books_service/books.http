@@ -1,0 +1,11 @@
+http://localhost:3001/api/books
+
+POST http://localhost:3001/api/books
+Content-Type: application/json
+
+{
+  "title": "Pan Tadeusz",
+  "author": "Adam Mickiewicz",
+  "year": 1834
+}
+
